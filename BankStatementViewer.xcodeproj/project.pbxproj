@@ -1,0 +1,323 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A100002001 /* BankStatementViewerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A100002000 /* BankStatementViewerApp.swift */; };
+		A100002101 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A100002100 /* ContentView.swift */; };
+		A100002201 /* ParseResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = A100002200 /* ParseResult.swift */; };
+		A100002301 /* ParserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A100002300 /* ParserService.swift */; };
+		A100002401 /* PDFPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A100002400 /* PDFPreviewView.swift */; };
+		A100002501 /* TransactionTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A100002500 /* TransactionTableView.swift */; };
+		A100002601 /* DropTargetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A100002600 /* DropTargetView.swift */; };
+		A100002701 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A100002700 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A100000300 /* BankStatementViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BankStatementViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A100002000 /* BankStatementViewerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankStatementViewerApp.swift; sourceTree = "<group>"; };
+		A100002100 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A100002200 /* ParseResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseResult.swift; sourceTree = "<group>"; };
+		A100002300 /* ParserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParserService.swift; sourceTree = "<group>"; };
+		A100002400 /* PDFPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFPreviewView.swift; sourceTree = "<group>"; };
+		A100002500 /* TransactionTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableView.swift; sourceTree = "<group>"; };
+		A100002600 /* DropTargetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropTargetView.swift; sourceTree = "<group>"; };
+		A100002700 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A100002800 /* BankStatementViewer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BankStatementViewer.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A100001201 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A100000100 = {
+			isa = PBXGroup;
+			children = (
+				A100000500 /* BankStatementViewer */,
+				A100000600 /* Scripts */,
+				A100000400 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A100000400 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A100000300 /* BankStatementViewer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A100000500 /* BankStatementViewer */ = {
+			isa = PBXGroup;
+			children = (
+				A100002000 /* BankStatementViewerApp.swift */,
+				A100002100 /* ContentView.swift */,
+				A100003000 /* Models */,
+				A100003100 /* Services */,
+				A100003200 /* Views */,
+				A100002700 /* Assets.xcassets */,
+				A100002800 /* BankStatementViewer.entitlements */,
+			);
+			path = BankStatementViewer;
+			sourceTree = "<group>";
+		};
+		A100000600 /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Scripts;
+			path = Scripts;
+			sourceTree = "<group>";
+		};
+		A100003000 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A100002200 /* ParseResult.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A100003100 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A100002300 /* ParserService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A100003200 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A100002400 /* PDFPreviewView.swift */,
+				A100002500 /* TransactionTableView.swift */,
+				A100002600 /* DropTargetView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A100000200 /* BankStatementViewer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1000002 /* Build configuration list for PBXNativeTarget "BankStatementViewer" */;
+			buildPhases = (
+				A100001301 /* Bundle Parser */,
+				A100001001 /* Sources */,
+				A100001101 /* Resources */,
+				A100001201 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BankStatementViewer;
+			productName = BankStatementViewer;
+			productReference = A100000300 /* BankStatementViewer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A100000000 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					A100000200 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = B1000001 /* Build configuration list for PBXProject "BankStatementViewer" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A100000100;
+			productRefGroup = A100000400 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A100000200 /* BankStatementViewer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A100001101 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A100002701 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A100001301 /* Bundle Parser */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Bundle Parser";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "\"${SRCROOT}/Scripts/bundle-parser.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A100001001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A100002001 /* BankStatementViewerApp.swift in Sources */,
+				A100002101 /* ContentView.swift in Sources */,
+				A100002201 /* ParseResult.swift in Sources */,
+				A100002301 /* ParserService.swift in Sources */,
+				A100002401 /* PDFPreviewView.swift in Sources */,
+				A100002501 /* TransactionTableView.swift in Sources */,
+				A100002601 /* DropTargetView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A100000601 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A100000701 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		A100000801 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BankStatementViewer/BankStatementViewer.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Bank Statement Viewer";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.local.BankStatementViewer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A100000901 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BankStatementViewer/BankStatementViewer.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Bank Statement Viewer";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.local.BankStatementViewer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B1000001 /* Build configuration list for PBXProject "BankStatementViewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A100000601 /* Debug */,
+				A100000701 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1000002 /* Build configuration list for PBXNativeTarget "BankStatementViewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A100000801 /* Debug */,
+				A100000901 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A100000000 /* Project object */;
+}

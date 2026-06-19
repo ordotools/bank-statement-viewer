@@ -1,0 +1,10 @@
+.DS_Store
+build/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+BankStatementViewer.app/
+Vendor/**/dist/
+Vendor/**/build/
+Vendor/**/.venv/
+Vendor/**/*.spec

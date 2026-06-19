@@ -1,0 +1,3 @@
+[submodule "Vendor/bank-statement-parser"]
+	path = Vendor/bank-statement-parser
+	url = https://github.com/ordotools/bank-statement-parser.git
