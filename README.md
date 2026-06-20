@@ -63,9 +63,28 @@ When running from Xcode (Debug), the console may show messages that look alarmin
 | Message | Meaning |
 |---------|---------|
 | `connection to service named com.apple.linkd.autoShortcut` (4097) | SwiftUI/AppKit trying to register with Shortcuts/Intents under LLDB. This app does not use App Intents — safe to ignore. |
-| `Unable to obtain a task name port right ... (os/kern) failure (0x5)` | Typical Xcode debugger noise with ad-hoc signing. Safe to ignore if the app runs normally. |
+| `Unable to obtain a task name port right ... (os/kern) failure (0x5)` | Typical Xcode debugger noise with ad-hoc signing. Safe to ignore if the app runs normally. Set a **Team** under Signing & Capabilities to reduce this (see below). |
+| `AFIsDeviceGreymatterEligible` / `Missing entitlements for os_eligibility` | macOS probing Apple Intelligence eligibility. This app does not use Apple Intelligence — safe to ignore. |
+| `Accessibility: Not vending elements ... elementWindow(0) is lower than shield(2001)` | System overlay (Xcode debug bar, menu bar, Stage Manager) sits above the app window. Not an accessibility bug in this app. |
+| `invalid display identifier` | Transient WindowServer message during window creation, display hotplug, or debugger attach. Safe to ignore if the UI renders. |
+| `CALocalDisplayUpdateBlock returned NO` | Core Animation skipped a display refresh tick — common with SwiftUI + PDFKit under LLDB. Benign if the PDF preview looks correct. |
+| `deferral block timed out` / `executed twice` | AppKit/SwiftUI internal timing under the debugger. Safe to ignore. |
 | `CoreGraphics PDF has logged an error` / `fopen failed ... errno = 2` | PDFKit loading a PDF with missing embedded fonts, or a brief reload during SwiftUI updates. Benign if the preview renders correctly. |
 
 These do **not** indicate a broken Python connection. Debug parsing uses the shared scheme env var `BANKPARSE_ROOT` → `.venv/bin/python -m bankparse` (see `ParserService.swift`).
 
 To investigate a PDF that fails to render, add scheme environment variable `CG_PDF_VERBOSE=1`.
+
+To confirm messages are debugger noise, use **Product → Run Without Debugging** (⌃⌘R) or launch the built `.app` from Finder — console spam should drop sharply.
+
+To filter Xcode console noise, add excludes for `linkd`, `Greymatter`, and `CALocalDisplayUpdateBlock`.
+
+### Reduce debugger signing noise
+
+The project uses automatic signing. To cut `task name port` messages and other LLDB noise:
+
+1. Open `BankStatementViewer.xcodeproj` in Xcode.
+2. Select the **BankStatementViewer** target → **Signing & Capabilities**.
+3. Choose your **Team** (Apple ID / Developer account).
+
+No App Intents, Shortcuts, or `os_eligibility` entitlements are required for this app.

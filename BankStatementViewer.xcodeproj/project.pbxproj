@@ -15,6 +15,9 @@
 		A100002501 /* TransactionTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A100002500 /* TransactionTableView.swift */; };
 		A100002601 /* DropTargetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A100002600 /* DropTargetView.swift */; };
 		A100002701 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A100002700 /* Assets.xcassets */; };
+		A100002801 /* AppActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A100002810 /* AppActions.swift */; };
+		A100002901 /* TransactionExport.swift in Sources */ = {isa = PBXBuildFile; fileRef = A100002900 /* TransactionExport.swift */; };
+		A100002A01 /* ReconciliationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A100002A00 /* ReconciliationDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		A100002600 /* DropTargetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropTargetView.swift; sourceTree = "<group>"; };
 		A100002700 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A100002800 /* BankStatementViewer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BankStatementViewer.entitlements; sourceTree = "<group>"; };
+		A100002810 /* AppActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppActions.swift; sourceTree = "<group>"; };
+		A100002900 /* TransactionExport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionExport.swift; sourceTree = "<group>"; };
+		A100002A00 /* ReconciliationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReconciliationDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				A100002200 /* ParseResult.swift */,
+				A100002810 /* AppActions.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -92,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				A100002300 /* ParserService.swift */,
+				A100002900 /* TransactionExport.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -102,6 +110,7 @@
 				A100002400 /* PDFPreviewView.swift */,
 				A100002500 /* TransactionTableView.swift */,
 				A100002600 /* DropTargetView.swift */,
+				A100002A00 /* ReconciliationDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -205,6 +214,9 @@
 				A100002401 /* PDFPreviewView.swift in Sources */,
 				A100002501 /* TransactionTableView.swift in Sources */,
 				A100002601 /* DropTargetView.swift in Sources */,
+				A100002801 /* AppActions.swift in Sources */,
+				A100002901 /* TransactionExport.swift in Sources */,
+				A100002A01 /* ReconciliationDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +228,6 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
@@ -235,7 +246,6 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;

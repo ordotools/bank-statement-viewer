@@ -45,6 +45,26 @@ struct ParseResult: Codable {
         let passed = checks.filter { $0.hasPrefix("PASS") }.count
         return "\(passed)/\(checks.count) checks passed"
     }
+
+    struct ReconciliationCheck: Identifiable {
+        let id: Int
+        let passed: Bool
+        let label: String
+    }
+
+    var reconciliationChecks: [ReconciliationCheck] {
+        guard let checks else { return [] }
+        return checks.enumerated().map { index, line in
+            let passed = line.hasPrefix("PASS")
+            let label: String
+            if line.hasPrefix("PASS") || line.hasPrefix("FAIL") {
+                label = String(line.dropFirst(4)).trimmingCharacters(in: .whitespaces)
+            } else {
+                label = line
+            }
+            return ReconciliationCheck(id: index, passed: passed, label: label)
+        }
+    }
 }
 
 enum ParserError: LocalizedError {
