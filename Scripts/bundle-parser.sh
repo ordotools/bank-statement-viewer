@@ -3,13 +3,15 @@ set -euo pipefail
 
 ROOT="${SRCROOT:-$(cd "$(dirname "$0")/.." && pwd)}"
 PARSER_DIR="${ROOT}/Vendor/bank-statement-parser"
-DEST_DIR="${BUILT_PRODUCTS_DIR}/${UNWRAPPED_PRODUCT_NAME}.app/Contents/Resources/bin"
-DEST_BIN="${DEST_DIR}/bankparse"
 
 if [[ "${CONFIGURATION:-Debug}" == "Debug" ]]; then
   echo "Skipping parser bundle in Debug (uses BANKPARSE_ROOT venv)."
   exit 0
 fi
+
+PRODUCT="${PRODUCT_NAME:-BankStatementViewer}"
+DEST_DIR="${BUILT_PRODUCTS_DIR}/${PRODUCT}.app/Contents/Resources/bin"
+DEST_BIN="${DEST_DIR}/bankparse"
 
 if [[ ! -d "${PARSER_DIR}" ]]; then
   echo "error: Vendor/bank-statement-parser missing. Run: git submodule update --init"

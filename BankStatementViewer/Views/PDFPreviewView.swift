@@ -13,10 +13,16 @@ struct PDFPreviewView: NSViewRepresentable {
     }
 
     func updateNSView(_ pdfView: PDFView, context: Context) {
-        if let url {
-            pdfView.document = PDFDocument(url: url)
-        } else {
+        guard let url else {
             pdfView.document = nil
+            return
+        }
+        guard FileManager.default.fileExists(atPath: url.path) else {
+            pdfView.document = nil
+            return
+        }
+        if pdfView.document?.documentURL != url {
+            pdfView.document = PDFDocument(url: url)
         }
     }
 }
